@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Information — Virginia Edwards Design</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-logo" href="about.html">Virginia Edwards Design</a>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="norma-jeanne.html">Norma Jeanne</a>
+      <a href="environment.html">The Environment Keeps Happening To Me</a>
+      <a href="brutalist-jigsaw.html">The Brutalist Jigsaw</a>
+      <a href="cannibalism.html">Escape To Cannibalism</a>
+      <a href="excess.html">A Story Of Excess</a>
+    </div>
+    <a class="nav-contact is-active" href="contact.html">Contact Information</a>
+  </nav>
+
+  <main class="contact">
+    <div class="contact-clock" id="contact-clock">00:00:00</div>
+
+    <div class="contact-list" id="contact-list">
+      <!-- rows are generated below; this first one is the template/no-JS fallback -->
+    </div>
+  </main>
+
+  <script>
+    // build the repeated contact rows
+    (function () {
+      var list = document.getElementById('contact-list');
+      if (!list) return;
+      var mail = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>';
+      var insta = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+      var rowHTML =
+        '<div class="contact-row">' +
+          '<a href="mailto:ginnyedwards5@gmail.com">' + mail + 'ginnyedwards5@gmail.com</a>' +
+          '<a href="https://instagram.com/virginiaedwardsdesign" target="_blank" rel="noopener">' + insta + '@virginiaedwardsdesign</a>' +
+        '</div>';
+      for (var i = 0; i < 11; i++) list.insertAdjacentHTML('beforeend', rowHTML);
+    })();
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
