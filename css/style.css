@@ -342,3 +342,5 @@ img { display: block; max-width: 100%; }
   transition: top 0.15s ease;
 }
 .skip-link:focus { top: 8px; }
+
+.site-img { display: block; width: 100%; height: auto; border-radius: 2px; }

@@ -44,8 +44,34 @@ function buildHeroPattern() {
   }
 }
 
+// If an image file isn't in the folder yet, show a tidy labelled box instead
+// of a broken-image icon. Tries .png automatically before giving up.
+function handleMissingImage(img) {
+  const slot = img.getAttribute('data-slot') || img.getAttribute('src');
+  const cur = img.getAttribute('src') || '';
+  if (/\.jpg$/i.test(cur) && img.dataset.triedPng !== '1') {
+    img.dataset.triedPng = '1';
+    img.src = cur.replace(/\.jpg$/i, '.png');
+    return;
+  }
+  if (!img.parentNode) return;
+  const ph = document.createElement('div');
+  ph.className = 'placeholder';
+  ph.innerHTML = '<span>add ' + slot + '</span>';
+  img.parentNode.replaceChild(ph, img);
+}
+
+function wireImageFallbacks() {
+  document.querySelectorAll('img.site-img').forEach((img) => {
+    img.addEventListener('error', () => handleMissingImage(img));
+    // catch images that already failed before this script ran
+    if (img.complete && img.naturalWidth === 0) handleMissingImage(img);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   startHomeDate();
   startContactClock();
   buildHeroPattern();
+  wireImageFallbacks();
 });

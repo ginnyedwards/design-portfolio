@@ -1,3 +1,13 @@
+HOW TO ADD YOUR IMAGES (no code editing needed)
+================================================
+The pages now show a box that says e.g. "add images/norma-jeanne-1.jpg".
+To fill it: put an image file with that EXACT name into this folder.
+That's the whole job. The box turns into your photo automatically.
+
+- Names are case-sensitive: norma-jeanne-1.jpg works, Norma-Jeanne-1.JPG does NOT.
+- .jpg is expected, but .png also works (same name, .png instead of .jpg).
+- The full list of names each slot wants is below.
+
 PUT YOUR IMAGES IN THIS FOLDER
 ==============================
 
