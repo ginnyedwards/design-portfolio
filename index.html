@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav class="site-nav">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Primary">
     <a class="nav-logo" href="about.html">Virginia Edwards Design</a>
     <div class="nav-center">
-      <a class="is-active" href="index.html">Home</a>
+      <a class="is-active" aria-current="page" href="index.html">Home</a>
       <a href="norma-jeanne.html">Norma Jeanne</a>
       <a href="environment.html">The Environment Keeps Happening To Me</a>
       <a href="brutalist-jigsaw.html">The Brutalist Jigsaw</a>
@@ -24,12 +25,13 @@
     <a class="nav-contact" href="contact.html">Contact Information</a>
   </nav>
 
-  <main class="home">
+  <main id="main" class="home">
+    <h1 class="visually-hidden">Virginia Edwards Design — portfolio</h1>
     <div class="home-grid">
       <!-- Left: recreated repeating "VIRGINIA EDWARDS" pattern + live date.
            To use your real hero image instead, delete the <div id="hero-pattern">
            block and drop in:  <img src="images/home-hero.jpg" alt="Virginia Edwards"> -->
-      <div class="hero-pattern" id="hero-pattern">
+      <div class="hero-pattern" id="hero-pattern" aria-hidden="true">
         <div class="home-date" id="home-date">00.00.00</div>
       </div>
 
@@ -63,7 +65,7 @@
         </div>
         <div class="home-card home-card-rot-3">
           <a href="modernism-south-london.html">
-            <div class="placeholder"><span>images/home-card-6.jpg<br>(Modernism Living and Breathing in South London)</span></div>
+            <div class="placeholder"><span>images/home-card-6.jpg<br>(Modernism: Living and Breathing in South London)</span></div>
           </a>
         </div>
         <div class="home-card home-card-rot-1">

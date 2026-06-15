@@ -12,7 +12,7 @@
 
   --bg: #d7d7d5;
   --text: #2a2a28;          /* body + big titles */
-  --muted: #8b8b87;         /* nav links (resting) */
+  --muted: #5a5a55;         /* nav links (resting) — darkened to meet WCAG AA (was #8b8b87) */
   --muted-active: #45453f;  /* nav active / hover */
   --pill: rgba(248, 248, 245, 0.40);
   --card: #ffffff;
@@ -142,7 +142,7 @@ img { display: block; max-width: 100%; }
   text-align: center;
   padding: 22px;
   min-height: 200px;
-  color: #6f6f6a;
+  color: #555550;
   background: repeating-linear-gradient(
     45deg, #cfcfcc, #cfcfcc 12px, #c8c8c5 12px, #c8c8c5 24px);
   border: 1px solid var(--line);
@@ -315,3 +315,30 @@ img { display: block; max-width: 100%; }
 }
 
 :focus-visible { outline: 2px solid #555; outline-offset: 3px; }
+
+/* ---------- Accessibility utilities ---------- */
+
+/* visually hidden but available to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* skip-to-content link: hidden until focused via keyboard */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 100;
+  background: #1c1c1c;
+  color: #ffffff;
+  padding: 9px 16px;
+  border-radius: 6px;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 8px; }

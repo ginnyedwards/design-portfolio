@@ -46,8 +46,8 @@ type into the <img src="..."> on the page. Keeping the names above is simplest.
 
 New projects (added later)
   home-card-5.jpg               Modernism Didn’t Die thumbnail
-  home-card-6.jpg               Modernism Living and Breathing in South London thumbnail
+  home-card-6.jpg               Modernism: Living and Breathing in South London thumbnail
   home-card-7.jpg               Modern London Talks thumbnail
   modernism-didnt-die-1.jpg     Modernism Didn’t Die (2025)
-  modernism-south-london-1.jpg  Modernism Living and Breathing in South London (2025-2026)
+  modernism-south-london-1.jpg  Modernism: Living and Breathing in South London (2025-2026)
   modern-london-talks-1.jpg     Modern London Talks (2026)
