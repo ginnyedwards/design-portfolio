@@ -188,12 +188,32 @@ img { display: block; max-width: 100%; }
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 40px var(--gutter) 80px;
+/* Align the large skull image next to the smaller thumbnail block */
+.home-right-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the skull image and the smaller rows */
 }
-.home-grid {
+
+/* Make the skull image look nicely balanced relative to the grid next to it */
+.featured-card {
+  flex: 0 0 40%; /* Adjust this percentage to scale the skull bigger or smaller */
+}
+
+/* Force the remaining 7 images into exactly 2 horizontal rows */
+.home-cards-flow {
+  flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 60px);
-  align-items: start;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: column; /* Automatically creates columns to fit the two rows */
+  gap: 15px; /* Adjust spacing between the smaller thumbnails */
+}
+
+/* Keeps the image aspect ratios working nicely in the new layout */
+.home-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* recreated "VIRGINIA EDWARDS" hero pattern */
