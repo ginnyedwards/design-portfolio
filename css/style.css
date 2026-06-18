@@ -433,4 +433,24 @@ img { display: block; max-width: 100%; }
   from { opacity: .4 }
   to { opacity: 1 }
 }
+/* --- Slideshow Alignment Fixes --- */
+
+/* Ensures the text and slideshow sit beautifully next to each other */
+.project-body {
+  display: grid !important;
+  grid-template-columns: 1.1fr 1fr !important; /* Splitting the horizontal screen room cleanly */
+  gap: clamp(28px, 5vw, 80px) !important;       /* Adapts space dynamically */
+  align-items: start !important;
+  width: 100%;
+}
+
+/* Constrains slideshow to keep it aligned with text height bounds */
+.project-media {
+  width: 100% !important;
+  display: block !important;
+}
+
+.slideshow-container {
+  width: 100% !important;
+}
 
